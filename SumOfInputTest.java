@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import java.util.logging.Logger;
 
 /**
  * The test class SumOfInputTest.
@@ -31,27 +32,37 @@ public class SumOfInputTest
     public void tearDown()
     {
     }
-    
+
     @Test
     public void test1(){
         SumOfInput testSum = new SumOfInput();
-        
+
         assertEquals(Integer.valueOf(3), testSum.oneToNumber(2));
     }
-    
+
     @Test
     public void test2(){
         SumOfInput testSum = new SumOfInput();
-        
+
         assertEquals(Integer.valueOf(4465), testSum.oneToNumber(94));
         assertEquals(Integer.valueOf(171), testSum.oneToNumber(18));
     }
-    
+
     @Test
     public void test3(){
         SumOfInput testSum = new SumOfInput();
-        
+
         assertNotEquals(Integer.valueOf(9000), testSum.oneToNumber(42));
         assertNotEquals(Integer.valueOf(99999999), testSum.oneToNumber(2425804));
     }
+    // added by Aarti on 02/05
+    @Test
+    public void test4(){
+        SumOfInput testSum = new SumOfInput();
+        Integer tsum=0;
+        tsum = testSum.oneToNumber(10);
+        System.out.print ("Total is -->  "+tsum);
+
+    }
+
 }
